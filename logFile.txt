@@ -1,0 +1,555 @@
+********************************************
+*                                          *
+*             TOSSIM Script                *
+*                                          *
+********************************************
+Initializing mac....
+Initializing radio channels....
+    using topology file: topology.txt
+    using noise file: meyer-heavy.txt
+Initializing simulator....
+Activate debug message on channel boot
+Activate debug message on channel radio
+Activate debug message on channel timer
+Activate debug message on channel pairing
+Activate debug message on channel ACK
+Activate debug message on channel radio_send
+Activate debug message on channel radio_rec
+Activate debug message on channel radio_pack
+Activate debug message on channel ALARM
+Activate debug message on channel value
+Creating node 1...
+>>>Will boot at time 0 [sec]
+Creating node 2...
+>>>Will boot at time 1 [sec]
+Creating node 3...
+>>>Will boot at time 2 [sec]
+Creating node 4...
+>>>Will boot at time 3 [sec]
+Creating radio channels...
+>>>Setting radio channel from node  1  to node  2  with gain  -60.0  dBm
+>>>Setting radio channel from node  1  to node  3  with gain  -60.0  dBm
+>>>Setting radio channel from node  1  to node  4  with gain  -60.0  dBm
+>>>Setting radio channel from node  2  to node  1  with gain  -60.0  dBm
+>>>Setting radio channel from node  2  to node  3  with gain  -60.0  dBm
+>>>Setting radio channel from node  2  to node  4  with gain  -60.0  dBm
+>>>Setting radio channel from node  3  to node  1  with gain  -60.0  dBm
+>>>Setting radio channel from node  3  to node  2  with gain  -60.0  dBm
+>>>Setting radio channel from node  3  to node  4  with gain  -60.0  dBm
+>>>Setting radio channel from node  4  to node  1  with gain  -60.0  dBm
+>>>Setting radio channel from node  4  to node  2  with gain  -60.0  dBm
+>>>Setting radio channel from node  4  to node  3  with gain  -60.0  dBm
+Initializing Closest Pattern Matching (CPM)...
+Reading noise model data file: meyer-heavy.txt
+Loading:##Done!
+>>>Creating noise model for node: 1
+>>>Creating noise model for node: 2
+>>>Creating noise model for node: 3
+>>>Creating noise model for node: 4
+Start simulation with TOSSIM! 
+
+
+
+DEBUG (1): Application booted.
+DEBUG (1): Radio on on node 1!
+DEBUG (1): key1 filled successfullyDEBUG (1): Sending packet of type PAIRING from Mote 1 in broadcast...
+ at time 0:0:0.000000010 
+DEBUG (1): Packet from Mote 1 sent...
+ at time 0:0:0.011154119 
+DEBUG (1): Mote 1, Timer fired, counter is 21.
+DEBUG (1): key1 filled successfullyDEBUG (1): Sending packet of type PAIRING from Mote 1 in broadcast...
+ at time 0:0:0.976562510 
+DEBUG (1): Packet from Mote 1 sent...
+ at time 0:0:0.981491070 
+DEBUG (2): Application booted.
+DEBUG (2): Radio on on node 2!
+DEBUG (2): Sending packet of type PAIRING from Mote 2 in broadcast...
+ at time 0:0:1.000000010 
+DEBUG (1): Received packet at time 0:0:1.009933423 at mote 1
+DEBUG (1): >>>Pack 
+ 	 Payload length 27 
+		 Payload 
+		 msg_type: PAIRING
+		 key: Avser242bmdGJKEB2J7b 
+		 src_address: 2 
+		 stop_pairing: FALSE
+		 x_coordinate: 0 
+		 y_coordinate: 0 
+		 kinematic_status not recognized, unexpected error. Value: 0 
+DEBUG (1): the key received is equal to my key
+
+DEBUG (1): Sending pairing done between mote 2 and mote 1!
+DEBUG (1): Pairing done between motes 2 and 1
+DEBUG (1): Sending packet of type PAIRING_DONE from Mote 1 to Mote 2...
+ at time 0:0:1.009933423 
+DEBUG (2): Packet from Mote 2 sent...
+ at time 0:0:1.010101269 
+DEBUG (2): Received packet at time 0:0:1.017928982 at mote 2
+DEBUG (2): >>>Pack 
+ 	 Payload length 27 
+		 Payload 
+		 msg_type: PAIRING
+		 key: Avser242bmdGJKEB2J7b 
+		 src_address: 1 
+		 stop_pairing: TRUE
+		 x_coordinate: 0 
+		 y_coordinate: 0 
+		 kinematic_status not recognized, unexpected error. Value: 0 
+DEBUG (2): the key received is equal to my key
+
+DEBUG (2): Pairing done succesfully between mote 1 and mote 2!
+DEBUG (1): Packet from Mote 1 sent...
+ at time 0:0:1.018096828 
+DEBUG (1): Mote 1, Timer fired, counter is 21.
+DEBUG (1): pairing done
+
+DEBUG (2): Mote 2, Timer fired, counter is 21.
+DEBUG (2): pairing done
+
+DEBUG (2): starting MilliTimer2
+
+DEBUG (3): Application booted.
+DEBUG (3): Radio on on node 3!
+DEBUG (3): Sending packet of type PAIRING from Mote 3 in broadcast...
+ at time 0:0:2.000000010 
+DEBUG (2): Received packet at time 0:0:2.007965051 at mote 2
+DEBUG (2): >>>Pack 
+ 	 Payload length 27 
+		 Payload 
+		 msg_type: PAIRING
+		 key: HFdNkJGB432jnGE89W1m 
+		 src_address: 3 
+		 stop_pairing: FALSE
+		 x_coordinate: 0 
+		 y_coordinate: 0 
+		 kinematic_status not recognized, unexpected error. Value: 0 
+DEBUG (2): the key received is different to my key
+
+ERROR (2): The key received from Mote 3 doesn't match the key stored in Mote 2
+DEBUG (1): Received packet at time 0:0:2.007965051 at mote 1
+DEBUG (1): >>>Pack 
+ 	 Payload length 27 
+		 Payload 
+		 msg_type: PAIRING
+		 key: HFdNkJGB432jnGE89W1m 
+		 src_address: 3 
+		 stop_pairing: FALSE
+		 x_coordinate: 0 
+		 y_coordinate: 0 
+		 kinematic_status not recognized, unexpected error. Value: 0 
+DEBUG (1): the key received is different to my key
+
+ERROR (1): The key received from Mote 3 doesn't match the key stored in Mote 1
+DEBUG (3): Packet from Mote 3 sent...
+ at time 0:0:2.008132897 
+DEBUG (3): Mote 3, Timer fired, counter is 21.
+DEBUG (3): Sending packet of type PAIRING from Mote 3 in broadcast...
+ at time 0:0:2.976562510 
+DEBUG (2): Received packet at time 0:0:2.987365669 at mote 2
+DEBUG (2): >>>Pack 
+ 	 Payload length 27 
+		 Payload 
+		 msg_type: PAIRING
+		 key: HFdNkJGB432jnGE89W1m 
+		 src_address: 3 
+		 stop_pairing: FALSE
+		 x_coordinate: 0 
+		 y_coordinate: 0 
+		 kinematic_status not recognized, unexpected error. Value: 0 
+DEBUG (2): the key received is different to my key
+
+ERROR (2): The key received from Mote 3 doesn't match the key stored in Mote 2
+DEBUG (1): Received packet at time 0:0:2.987365669 at mote 1
+DEBUG (1): >>>Pack 
+ 	 Payload length 27 
+		 Payload 
+		 msg_type: PAIRING
+		 key: HFdNkJGB432jnGE89W1m 
+		 src_address: 3 
+		 stop_pairing: FALSE
+		 x_coordinate: 0 
+		 y_coordinate: 0 
+		 kinematic_status not recognized, unexpected error. Value: 0 
+DEBUG (1): the key received is different to my key
+
+ERROR (1): The key received from Mote 3 doesn't match the key stored in Mote 1
+DEBUG (3): Packet from Mote 3 sent...
+ at time 0:0:2.987533515 
+DEBUG (4): Application booted.
+DEBUG (4): Radio on on node 4!
+DEBUG (4): Sending packet of type PAIRING from Mote 4 in broadcast...
+ at time 0:0:3.000000010 
+DEBUG (3): Received packet at time 0:0:3.007125822 at mote 3
+DEBUG (3): >>>Pack 
+ 	 Payload length 27 
+		 Payload 
+		 msg_type: PAIRING
+		 key: HFdNkJGB432jnGE89W1m 
+		 src_address: 4 
+		 stop_pairing: FALSE
+		 x_coordinate: 0 
+		 y_coordinate: 0 
+		 kinematic_status not recognized, unexpected error. Value: 0 
+DEBUG (3): the key received is equal to my key
+
+DEBUG (3): Pairing done between motes 4 and 3
+DEBUG (3): Sending packet of type PAIRING_DONE from Mote 3 to Mote 4...
+ at time 0:0:3.007125822 
+DEBUG (2): Received packet at time 0:0:3.007125822 at mote 2
+DEBUG (2): >>>Pack 
+ 	 Payload length 27 
+		 Payload 
+		 msg_type: PAIRING
+		 key: HFdNkJGB432jnGE89W1m 
+		 src_address: 4 
+		 stop_pairing: FALSE
+		 x_coordinate: 0 
+		 y_coordinate: 0 
+		 kinematic_status not recognized, unexpected error. Value: 0 
+DEBUG (2): the key received is different to my key
+
+ERROR (2): The key received from Mote 4 doesn't match the key stored in Mote 2
+DEBUG (1): Received packet at time 0:0:3.007125822 at mote 1
+DEBUG (1): >>>Pack 
+ 	 Payload length 27 
+		 Payload 
+		 msg_type: PAIRING
+		 key: HFdNkJGB432jnGE89W1m 
+		 src_address: 4 
+		 stop_pairing: FALSE
+		 x_coordinate: 0 
+		 y_coordinate: 0 
+		 kinematic_status not recognized, unexpected error. Value: 0 
+DEBUG (1): the key received is different to my key
+
+ERROR (1): The key received from Mote 4 doesn't match the key stored in Mote 1
+DEBUG (4): Packet from Mote 4 sent...
+ at time 0:0:3.007293668 
+DEBUG (4): Received packet at time 0:0:3.009063677 at mote 4
+DEBUG (4): >>>Pack 
+ 	 Payload length 27 
+		 Payload 
+		 msg_type: PAIRING
+		 key: HFdNkJGB432jnGE89W1m 
+		 src_address: 3 
+		 stop_pairing: TRUE
+		 x_coordinate: 0 
+		 y_coordinate: 0 
+		 kinematic_status not recognized, unexpected error. Value: 0 
+DEBUG (4): the key received is equal to my key
+
+DEBUG (3): Packet from Mote 3 sent...
+ at time 0:0:3.009231523 
+DEBUG (3): Mote 3, Timer fired, counter is 21.
+DEBUG (3): pairing done
+
+DEBUG (4): Mote 4, Timer fired, counter is 21.
+DEBUG (4): pairing done
+
+DEBUG (4): starting MilliTimer2
+
+DEBUG (2): Sending packet INFO from mote 2 to mote 1
+ at time 0:0:11.742187510 
+DEBUG (1): Received packet at time 0:0:11.748962372 at mote 1
+DEBUG (1): >>>Pack 
+ 	 Payload length 27 
+		 Payload 
+		 msg_type: INFO
+		 key: Avser242bmdGJKEB2J7b 
+		 src_address: 2 
+		 stop_pairing: TRUE
+		 x_coordinate: 0 
+		 y_coordinate: 0 
+		 kinematic_status: STANDING 
+DEBUG (2): Packet from Mote 2 sent...
+ at time 0:0:11.749130218 
+DEBUG (2): Packet sent from Mote 2 acknowledged by Mote 1, acks received at Mote 2: 1
+DEBUG (4): Sending packet INFO from mote 4 to mote 3
+ at time 0:0:13.742187510 
+DEBUG (3): Received packet at time 0:0:13.751129108 at mote 3
+DEBUG (3): >>>Pack 
+ 	 Payload length 27 
+		 Payload 
+		 msg_type: INFO
+		 key: HFdNkJGB432jnGE89W1m 
+		 src_address: 4 
+		 stop_pairing: TRUE
+		 x_coordinate: 0 
+		 y_coordinate: 0 
+		 kinematic_status: STANDING 
+DEBUG (4): Packet from Mote 4 sent...
+ at time 0:0:13.751296953 
+DEBUG (4): Packet sent from Mote 4 acknowledged by Mote 3, acks received at Mote 4: 1
+DEBUG (2): Sending packet INFO from mote 2 to mote 1
+ at time 0:0:21.507812510 
+DEBUG (1): Received packet at time 0:0:21.516601521 at mote 1
+DEBUG (1): >>>Pack 
+ 	 Payload length 27 
+		 Payload 
+		 msg_type: INFO
+		 key: Avser242bmdGJKEB2J7b 
+		 src_address: 2 
+		 stop_pairing: TRUE
+		 x_coordinate: 128 
+		 y_coordinate: 245 
+		 kinematic_status: WALKING 
+DEBUG (2): Packet from Mote 2 sent...
+ at time 0:0:21.516769366 
+DEBUG (2): Packet sent from Mote 2 acknowledged by Mote 1, acks received at Mote 2: 2
+DEBUG (4): Sending packet INFO from mote 4 to mote 3
+ at time 0:0:23.507812510 
+DEBUG (3): Received packet at time 0:0:23.512161239 at mote 3
+DEBUG (3): >>>Pack 
+ 	 Payload length 27 
+		 Payload 
+		 msg_type: INFO
+		 key: HFdNkJGB432jnGE89W1m 
+		 src_address: 4 
+		 stop_pairing: TRUE
+		 x_coordinate: 0 
+		 y_coordinate: 67 
+		 kinematic_status: STANDING 
+DEBUG (4): Packet from Mote 4 sent...
+ at time 0:0:23.512329085 
+DEBUG (4): Packet sent from Mote 4 acknowledged by Mote 3, acks received at Mote 4: 2
+DEBUG (2): Sending packet INFO from mote 2 to mote 1
+ at time 0:0:31.273437510 
+DEBUG (1): Received packet at time 0:0:31.283050491 at mote 1
+DEBUG (1): >>>Pack 
+ 	 Payload length 27 
+		 Payload 
+		 msg_type: INFO
+		 key: Avser242bmdGJKEB2J7b 
+		 src_address: 2 
+		 stop_pairing: TRUE
+		 x_coordinate: 144 
+		 y_coordinate: 211 
+		 kinematic_status: WALKING 
+DEBUG (2): Packet from Mote 2 sent...
+ at time 0:0:31.283218336 
+DEBUG (2): Packet sent from Mote 2 acknowledged by Mote 1, acks received at Mote 2: 3
+DEBUG (4): Sending packet INFO from mote 4 to mote 3
+ at time 0:0:33.273437510 
+DEBUG (4): Packet from Mote 4 sent...
+ at time 0:0:33.278732278 
+ERROR (4): Packet sent from Mote 4 not acknowledged by Mote 3, acks received at Mote 4: 2
+DEBUG (4): Sending packet INFO from mote 4 to mote 3
+ at time 0:0:33.278732278 
+DEBUG (3): Received packet at time 0:0:33.288574140 at mote 3
+DEBUG (3): >>>Pack 
+ 	 Payload length 27 
+		 Payload 
+		 msg_type: INFO
+		 key: HFdNkJGB432jnGE89W1m 
+		 src_address: 4 
+		 stop_pairing: TRUE
+		 x_coordinate: 2 
+		 y_coordinate: 181 
+		 kinematic_status: RUNNING 
+DEBUG (4): Packet from Mote 4 sent...
+ at time 0:0:33.288741986 
+DEBUG (4): Packet sent from Mote 4 acknowledged by Mote 3, acks received at Mote 4: 3
+DEBUG (2): Sending packet INFO from mote 2 to mote 1
+ at time 0:0:41.039062510 
+DEBUG (1): Received packet at time 0:0:41.047561605 at mote 1
+DEBUG (1): >>>Pack 
+ 	 Payload length 27 
+		 Payload 
+		 msg_type: INFO
+		 key: Avser242bmdGJKEB2J7b 
+		 src_address: 2 
+		 stop_pairing: TRUE
+		 x_coordinate: 2 
+		 y_coordinate: 141 
+		 kinematic_status: WALKING 
+DEBUG (2): Packet from Mote 2 sent...
+ at time 0:0:41.047729451 
+DEBUG (2): Packet sent from Mote 2 acknowledged by Mote 1, acks received at Mote 2: 4
+DEBUG (4): Sending packet INFO from mote 4 to mote 3
+ at time 0:0:43.039062510 
+DEBUG (3): Received packet at time 0:0:43.048812819 at mote 3
+DEBUG (3): >>>Pack 
+ 	 Payload length 27 
+		 Payload 
+		 msg_type: INFO
+		 key: HFdNkJGB432jnGE89W1m 
+		 src_address: 4 
+		 stop_pairing: TRUE
+		 x_coordinate: 0 
+		 y_coordinate: 64 
+		 kinematic_status: STANDING 
+DEBUG (4): Packet from Mote 4 sent...
+ at time 0:0:43.048980665 
+DEBUG (4): Packet sent from Mote 4 acknowledged by Mote 3, acks received at Mote 4: 4
+DEBUG (2): Sending packet INFO from mote 2 to mote 1
+ at time 0:0:50.804687510 
+DEBUG (1): Received packet at time 0:0:50.816406191 at mote 1
+DEBUG (1): >>>Pack 
+ 	 Payload length 27 
+		 Payload 
+		 msg_type: INFO
+		 key: Avser242bmdGJKEB2J7b 
+		 src_address: 2 
+		 stop_pairing: TRUE
+		 x_coordinate: 0 
+		 y_coordinate: 127 
+		 kinematic_status: WALKING 
+DEBUG (2): Packet from Mote 2 sent...
+ at time 0:0:50.816574037 
+DEBUG (2): Packet sent from Mote 2 acknowledged by Mote 1, acks received at Mote 2: 5
+DEBUG (4): Sending packet INFO from mote 4 to mote 3
+ at time 0:0:52.804687510 
+DEBUG (3): Received packet at time 0:0:52.809570294 at mote 3
+DEBUG (3): >>>Pack 
+ 	 Payload length 27 
+		 Payload 
+		 msg_type: INFO
+		 key: HFdNkJGB432jnGE89W1m 
+		 src_address: 4 
+		 stop_pairing: TRUE
+		 x_coordinate: 16 
+		 y_coordinate: 212 
+		 kinematic_status: RUNNING 
+DEBUG (4): Packet from Mote 4 sent...
+ at time 0:0:52.809738139 
+DEBUG (4): Packet sent from Mote 4 acknowledged by Mote 3, acks received at Mote 4: 5
+DEBUG (2): Sending packet INFO from mote 2 to mote 1
+ at time 0:1:0.570312510 
+DEBUG (1): Received packet at time 0:1:0.572921747 at mote 1
+DEBUG (1): >>>Pack 
+ 	 Payload length 27 
+		 Payload 
+		 msg_type: INFO
+		 key: Avser242bmdGJKEB2J7b 
+		 src_address: 2 
+		 stop_pairing: TRUE
+		 x_coordinate: 2 
+		 y_coordinate: 135 
+		 kinematic_status: WALKING 
+DEBUG (2): Packet from Mote 2 sent...
+ at time 0:1:0.573089593 
+DEBUG (2): Packet sent from Mote 2 acknowledged by Mote 1, acks received at Mote 2: 6
+DEBUG (4): Sending packet INFO from mote 4 to mote 3
+ at time 0:1:2.570312510 
+DEBUG (3): Received packet at time 0:1:2.574600204 at mote 3
+DEBUG (3): >>>Pack 
+ 	 Payload length 27 
+		 Payload 
+		 msg_type: INFO
+		 key: HFdNkJGB432jnGE89W1m 
+		 src_address: 4 
+		 stop_pairing: TRUE
+		 x_coordinate: 144 
+		 y_coordinate: 140 
+		 kinematic_status: STANDING 
+DEBUG (4): Packet from Mote 4 sent...
+ at time 0:1:2.574768050 
+DEBUG (4): Packet sent from Mote 4 acknowledged by Mote 3, acks received at Mote 4: 6
+DEBUG (2): Sending packet INFO from mote 2 to mote 1
+ at time 0:1:10.335937510 
+DEBUG (1): Received packet at time 0:1:10.342987029 at mote 1
+DEBUG (1): >>>Pack 
+ 	 Payload length 27 
+		 Payload 
+		 msg_type: INFO
+		 key: Avser242bmdGJKEB2J7b 
+		 src_address: 2 
+		 stop_pairing: TRUE
+		 x_coordinate: 144 
+		 y_coordinate: 88 
+		 kinematic_status: FALLING 
+DEBUG (1): FALL ALARM: THE CHILD 2 FELL!, the position of the children is
+	X: 144
+	Y: 88
+DEBUG (2): Packet from Mote 2 sent...
+ at time 0:1:10.343154875 
+DEBUG (2): Packet sent from Mote 2 acknowledged by Mote 1, acks received at Mote 2: 7
+DEBUG (4): Sending packet INFO from mote 4 to mote 3
+ at time 0:1:12.335937510 
+DEBUG (3): Received packet at time 0:1:12.341842626 at mote 3
+DEBUG (3): >>>Pack 
+ 	 Payload length 27 
+		 Payload 
+		 msg_type: INFO
+		 key: HFdNkJGB432jnGE89W1m 
+		 src_address: 4 
+		 stop_pairing: TRUE
+		 x_coordinate: 0 
+		 y_coordinate: 233 
+		 kinematic_status: FALLING 
+DEBUG (3): FALL ALARM: THE CHILD 4 FELL!, the position of the children is
+	X: 0
+	Y: 233
+DEBUG (4): Packet from Mote 4 sent...
+ at time 0:1:12.342010472 
+DEBUG (4): Packet sent from Mote 4 acknowledged by Mote 3, acks received at Mote 4: 7
+DEBUG (2): Sending packet INFO from mote 2 to mote 1
+ at time 0:1:20.101562510 
+DEBUG (1): Received packet at time 0:1:20.105331408 at mote 1
+DEBUG (1): >>>Pack 
+ 	 Payload length 27 
+		 Payload 
+		 msg_type: INFO
+		 key: Avser242bmdGJKEB2J7b 
+		 src_address: 2 
+		 stop_pairing: TRUE
+		 x_coordinate: 128 
+		 y_coordinate: 136 
+		 kinematic_status: STANDING 
+DEBUG (2): Packet from Mote 2 sent...
+ at time 0:1:20.105499254 
+DEBUG (2): Packet sent from Mote 2 acknowledged by Mote 1, acks received at Mote 2: 8
+DEBUG (4): Sending packet INFO from mote 4 to mote 3
+ at time 0:1:22.101562510 
+DEBUG (3): Received packet at time 0:1:22.111114456 at mote 3
+DEBUG (3): >>>Pack 
+ 	 Payload length 27 
+		 Payload 
+		 msg_type: INFO
+		 key: HFdNkJGB432jnGE89W1m 
+		 src_address: 4 
+		 stop_pairing: TRUE
+		 x_coordinate: 130 
+		 y_coordinate: 56 
+		 kinematic_status: RUNNING 
+DEBUG (4): Packet from Mote 4 sent...
+ at time 0:1:22.111282301 
+DEBUG (4): Packet sent from Mote 4 acknowledged by Mote 3, acks received at Mote 4: 8
+DEBUG (2): Sending packet INFO from mote 2 to mote 1
+ at time 0:1:29.867187510 
+DEBUG (1): Received packet at time 0:1:29.875427208 at mote 1
+DEBUG (1): >>>Pack 
+ 	 Payload length 27 
+		 Payload 
+		 msg_type: INFO
+		 key: Avser242bmdGJKEB2J7b 
+		 src_address: 2 
+		 stop_pairing: TRUE
+		 x_coordinate: 16 
+		 y_coordinate: 252 
+		 kinematic_status: STANDING 
+DEBUG (2): Packet from Mote 2 sent...
+ at time 0:1:29.875595053 
+DEBUG (2): Packet sent from Mote 2 acknowledged by Mote 1, acks received at Mote 2: 9
+DEBUG (4): Sending packet INFO from mote 4 to mote 3
+ at time 0:1:31.867187510 
+DEBUG (3): Received packet at time 0:1:31.872436502 at mote 3
+DEBUG (3): >>>Pack 
+ 	 Payload length 27 
+		 Payload 
+		 msg_type: INFO
+		 key: HFdNkJGB432jnGE89W1m 
+		 src_address: 4 
+		 stop_pairing: TRUE
+		 x_coordinate: 16 
+		 y_coordinate: 249 
+		 kinematic_status: STANDING 
+DEBUG (4): Packet from Mote 4 sent...
+ at time 0:1:31.872604348 
+DEBUG (4): Packet sent from Mote 4 acknowledged by Mote 3, acks received at Mote 4: 9
+DEBUG (2): Sending packet INFO from mote 2 to mote 1
+ at time 0:1:39.632812510 
+
+
+
+Simulation finished!
